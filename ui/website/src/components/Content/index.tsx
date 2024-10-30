@@ -11,6 +11,7 @@ import GithubLink from "../GithubLink";
 import DarkSwitch from "../DarkSwitch";
 import { isLogin } from "../../utils/check";
 import { generateSearchEngineCard } from "../../utils/serachEngine";
+import { openUrlCard } from "../../utils/openUrl";
 import { toggleJumpTarget } from "../../utils/setting";
 
 const mutiSearch = (s, t) => {
@@ -109,9 +110,9 @@ const Content = (props: any) => {
             mutiSearch(item.url, searchString)
           );
         });
-      return [...localResult, ...generateSearchEngineCard(searchString)]
+      return [...localResult,...openUrlCard, ...generateSearchEngineCard(searchString)]
     } else {
-      return [...generateSearchEngineCard(searchString)];
+      return [...openUrlCard, ...generateSearchEngineCard(searchString)];
     }
   }, [data, currTag, searchString]);
 

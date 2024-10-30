@@ -2,11 +2,11 @@ export const generateSearchEngineCard = (searchString: string) => {
   if (!searchString.trim()) return [];
   const result = [
     {
-      name: "使用百度搜索",
-      url: searchBaidu(searchString),
-      desc: `在百度中搜索 「${searchString}」`,
-      id: 8800880001,
-      logo: "baidu.ico",
+      name: "使用 Google 搜索",
+      url: searchGoogle(searchString),
+      desc: `在 Google 中搜索 「${searchString}」`,
+      id: 8800880003,
+      logo: "google.ico",
       hide: false
     },
     {
@@ -18,11 +18,11 @@ export const generateSearchEngineCard = (searchString: string) => {
       hide: false
     },
     {
-      name: "使用 Google 搜索",
-      url: searchGoogle(searchString),
-      desc: `在 Google 中搜索 「${searchString}」`,
-      id: 8800880003,
-      logo: "google.ico",
+      name: "使用百度搜索",
+      url: searchBaidu(searchString),
+      desc: `在百度中搜索 「${searchString}」`,
+      id: 8800880001,
+      logo: "baidu.ico",
       hide: false
     }
   ]
