@@ -110,9 +110,9 @@ const Content = (props: any) => {
             mutiSearch(item.url, searchString)
           );
         });
-      return [...localResult,...openUrlCard, ...generateSearchEngineCard(searchString)]
+      return [...localResult,...openUrlCard(searchString), ...generateSearchEngineCard(searchString)]
     } else {
-      return [...openUrlCard, ...generateSearchEngineCard(searchString)];
+      return [...openUrlCard(searchString), ...generateSearchEngineCard(searchString)];
     }
   }, [data, currTag, searchString]);
 
